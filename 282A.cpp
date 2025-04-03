@@ -5,18 +5,12 @@ int main()
     int n;
     cin >> n;
     int x = 0;
-    for (int i = 0; i < n; ++i) 
+    while (n--) 
     {
         string statement;
         cin >> statement;
-        if (statement.find("++") != string::npos)   // nops means not present 
-        {
-            x++;
-        }
-        else if (statement.find("--") != string::npos) 
-        {
-            x--;
-        }
+        if (statement[1] == '+') ++x;
+        else --x;
     }
     cout << x << endl;
     return 0;
